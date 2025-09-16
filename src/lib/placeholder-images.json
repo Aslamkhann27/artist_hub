@@ -1,3 +1,15 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    { "id": "artist-1", "description": "Portrait of Elena Vance", "imageUrl": "https://picsum.photos/seed/a1/200/200", "imageHint": "woman portrait" },
+    { "id": "artist-2", "description": "Portrait of Marcus Cole", "imageUrl": "https://picsum.photos/seed/a2/200/200", "imageHint": "man portrait" },
+    { "id": "artist-3", "description": "Portrait of Sofia Reyes", "imageUrl": "https://picsum.photos/seed/a3/200/200", "imageHint": "woman artist" },
+    { "id": "artwork-1", "description": "Abstract artwork 'Cosmic Dance'", "imageUrl": "https://picsum.photos/seed/w1/600/800", "imageHint": "abstract painting" },
+    { "id": "artwork-2", "description": "Abstract artwork 'City in Bloom'", "imageUrl": "https://picsum.photos/seed/w2/800/600", "imageHint": "abstract cityscape" },
+    { "id": "artwork-3", "description": "Realism painting 'The Old Library'", "imageUrl": "https://picsum.photos/seed/w3/800/600", "imageHint": "library painting" },
+    { "id": "artwork-4", "description": "Realism painting 'Morning Dew'", "imageUrl": "https://picsum.photos/seed/w4/600/800", "imageHint": "nature macro" },
+    { "id": "artwork-5", "description": "Impressionist painting 'Sunset on the Water'", "imageUrl": "https://picsum.photos/seed/w5/800/600", "imageHint": "impressionist sunset" },
+    { "id": "artwork-6", "description": "Impressionist painting 'Cafe Terrace'", "imageUrl": "https://picsum.photos/seed/w6/600/800", "imageHint": "impressionist cafe" },
+    { "id": "artwork-7", "description": "Realism painting 'Still Life with Fruit'", "imageUrl": "https://picsum.photos/seed/w7/800/600", "imageHint": "still life" },
+    { "id": "artwork-8", "description": "Abstract artwork 'Ethereal Dreams'", "imageUrl": "https://picsum.photos/seed/w8/600/800", "imageHint": "dreamy abstract" }
+  ]
 }
