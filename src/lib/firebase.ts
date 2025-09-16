@@ -19,12 +19,6 @@ if (!getApps().length) {
   app = getApp();
 }
 
-let auth: Auth;
+const auth = getAuth(app);
 
-// Ensure auth is only initialized on the client side
-if (typeof window !== 'undefined') {
-    auth = getAuth(app);
-}
-
-// @ts-ignore
 export { app, auth };
