@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp, getApps } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp, getApps, getApp, type FirebaseApp } from "firebase/app";
+import { getAuth, type Auth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -12,11 +12,19 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-let app;
+let app: FirebaseApp;
 if (!getApps().length) {
   app = initializeApp(firebaseConfig);
+} else {
+  app = getApp();
 }
 
-const auth = getAuth(app);
+let auth: Auth;
 
+// Ensure auth is only initialized on the client side
+if (typeof window !== 'undefined') {
+    auth = getAuth(app);
+}
+
+// @ts-ignore
 export { app, auth };
