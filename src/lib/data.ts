@@ -1,4 +1,4 @@
-import type { Artist, Artwork } from './types';
+import type { Artist, Artwork, Customer, Order } from './types';
 import { PlaceHolderImages } from './placeholder-images';
 
 const imageMap = new Map(PlaceHolderImages.map(img => [img.id, img]));
@@ -19,6 +19,19 @@ const artists: Omit<Artist, 'portfolio'>[] = [
     { id: '2', name: 'Marcus Cole', bio: 'Marcus Cole is a master of realism. With a keen eye for detail, he captures everyday moments and objects with breathtaking precision, inviting viewers to see the beauty in the mundane.', avatarUrl: imageMap.get('artist-2')!.imageUrl },
     { id: '3', name: 'Sofia Reyes', bio: 'Sofia Reyes brings emotion to life with her impressionistic style. Her paintings are characterized by vibrant brushwork and a focus on light, capturing fleeting moments with energy and passion.', avatarUrl: imageMap.get('artist-3')!.imageUrl },
 ];
+
+const orders: Omit<Order, 'artwork'>[] = [
+    { id: 'ord-1', date: '2023-10-26', artworkId: '1', status: 'Delivered', total: 15000 },
+    { id: 'ord-2', date: '2023-11-15', artworkId: '5', status: 'Shipped', total: 18500 },
+    { id: 'ord-3', date: '2023-12-01', artworkId: '4', status: 'Processing', total: 9500 },
+];
+
+const customer: Omit<Customer, 'orders'> = {
+    id: 'cust-1',
+    name: 'Rohan Sharma',
+    email: 'rohan.sharma@example.com',
+    avatarUrl: 'https://picsum.photos/seed/c1/100/100'
+};
 
 // In a real app, you would fetch this data from a database
 export const getArtworks = async (): Promise<Artwork[]> => {
@@ -48,4 +61,24 @@ export const getArtistById = async (id: string): Promise<Artist | undefined> => 
 export const getArtStyles = async (): Promise<string[]> => {
     const styles = new Set(artworks.map(art => art.style));
     return Array.from(styles);
+}
+
+export const getCustomerDashboardData = async (customerId: string): Promise<Customer | undefined> => {
+    if (customer.id !== customerId) return undefined;
+
+    const customerOrders: Order[] = orders.map(o => {
+        const artwork = artworks.find(a => a.id === (o as any).artworkId)!;
+        return {
+            id: o.id,
+            date: o.date,
+            artwork: artwork,
+            status: o.status,
+            total: o.total,
+        }
+    }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    return {
+        ...customer,
+        orders: customerOrders,
+    };
 }

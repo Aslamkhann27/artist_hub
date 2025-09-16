@@ -15,3 +15,19 @@ export type Artwork = {
   artistId: string;
   style: string;
 };
+
+export type Order = {
+  id: string;
+  date: string;
+  artwork: Artwork;
+  status: 'Processing' | 'Shipped' | 'Delivered';
+  total: number;
+};
+
+export type Customer = {
+    id: string;
+    name: string;
+    email: string;
+    avatarUrl: string;
+    orders: Order[];
+};
