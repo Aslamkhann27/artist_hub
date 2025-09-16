@@ -33,7 +33,7 @@ const ArtworkCard = ({ artwork }: ArtworkCardProps) => {
         </CardContent>
         <CardFooter className="p-4 pt-0">
           <p className="text-primary font-semibold text-lg">
-            ${artwork.price.toFixed(2)}
+            ₹{artwork.price.toLocaleString('en-IN')}
           </p>
         </CardFooter>
       </Card>

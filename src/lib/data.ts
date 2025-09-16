@@ -4,14 +4,14 @@ import { PlaceHolderImages } from './placeholder-images';
 const imageMap = new Map(PlaceHolderImages.map(img => [img.id, img]));
 
 const artworks: Artwork[] = [
-  { id: '1', title: 'Cosmic Dance', description: 'A vibrant explosion of colors on a canvas, representing the chaotic beauty of the universe.', price: 450, imageUrl: imageMap.get('artwork-1')!.imageUrl, artistId: '1', style: 'Abstract' },
-  { id: '2', title: 'City in Bloom', description: 'An abstract take on a bustling metropolis, where buildings are replaced by blooming flowers.', price: 620, imageUrl: imageMap.get('artwork-2')!.imageUrl, artistId: '1', style: 'Abstract' },
-  { id: '3', title: 'The Old Library', description: 'A hyper-realistic painting of a quiet, sunlit library corner, filled with ancient books.', price: 850, imageUrl: imageMap.get('artwork-3')!.imageUrl, artistId: '2', style: 'Realism' },
-  { id: '4', title: 'Morning Dew', description: 'A close-up view of a spider web covered in morning dew, glistening in the first light.', price: 300, imageUrl: imageMap.get('artwork-4')!.imageUrl, artistId: '2', style: 'Realism' },
-  { id: '5', title: 'Sunset on the Water', description: 'An impressionistic piece capturing the fleeting moments of a sunset over a calm lake.', price: 550, imageUrl: imageMap.get('artwork-5')!.imageUrl, artistId: '3', style: 'Impressionism' },
-  { id: '6', title: 'Cafe Terrace', description: 'A lively cafe scene, captured with bold brushstrokes and a rich color palette.', price: 710, imageUrl: imageMap.get('artwork-6')!.imageUrl, artistId: '3', style: 'Impressionism' },
-  { id: '7', title: 'Still Life with Fruit', description: 'A classic still life that plays with light and shadow on a bowl of fruit.', price: 400, imageUrl: imageMap.get('artwork-7')!.imageUrl, artistId: '2', style: 'Realism' },
-  { id: '8', title: 'Ethereal Dreams', description: 'A soft, dreamlike abstract piece with flowing shapes and pastel colors.', price: 380, imageUrl: imageMap.get('artwork-8')!.imageUrl, artistId: '1', style: 'Abstract' },
+  { id: '1', title: 'Cosmic Dance', description: 'A vibrant explosion of colors on a canvas, representing the chaotic beauty of the universe.', price: 15000, imageUrl: imageMap.get('artwork-1')!.imageUrl, artistId: '1', style: 'Abstract' },
+  { id: '2', title: 'City in Bloom', description: 'An abstract take on a bustling metropolis, where buildings are replaced by blooming flowers.', price: 22000, imageUrl: imageMap.get('artwork-2')!.imageUrl, artistId: '1', style: 'Abstract' },
+  { id: '3', title: 'The Old Library', description: 'A hyper-realistic painting of a quiet, sunlit library corner, filled with ancient books.', price: 35000, imageUrl: imageMap.get('artwork-3')!.imageUrl, artistId: '2', style: 'Realism' },
+  { id: '4', title: 'Morning Dew', description: 'A close-up view of a spider web covered in morning dew, glistening in the first light.', price: 9500, imageUrl: imageMap.get('artwork-4')!.imageUrl, artistId: '2', style: 'Realism' },
+  { id: '5', title: 'Sunset on the Water', description: 'An impressionistic piece capturing the fleeting moments of a sunset over a calm lake.', price: 18500, imageUrl: imageMap.get('artwork-5')!.imageUrl, artistId: '3', style: 'Impressionism' },
+  { id: '6', title: 'Cafe Terrace', description: 'A lively cafe scene, captured with bold brushstrokes and a rich color palette.', price: 25000, imageUrl: imageMap.get('artwork-6')!.imageUrl, artistId: '3', style: 'Impressionism' },
+  { id: '7', title: 'Still Life with Fruit', description: 'A classic still life that plays with light and shadow on a bowl of fruit.', price: 12000, imageUrl: imageMap.get('artwork-7')!.imageUrl, artistId: '2', style: 'Realism' },
+  { id: '8', title: 'Ethereal Dreams', description: 'A soft, dreamlike abstract piece with flowing shapes and pastel colors.', price: 11000, imageUrl: imageMap.get('artwork-8')!.imageUrl, artistId: '1', style: 'Abstract' },
 ];
 
 const artists: Omit<Artist, 'portfolio'>[] = [

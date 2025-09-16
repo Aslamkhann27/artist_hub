@@ -59,11 +59,11 @@ export default async function ArtworkPage({ params }: { params: { id: string } }
             )}
             
             <div className="mt-auto pt-6">
-              <p className="text-3xl font-bold text-primary mb-4">${artwork.price.toFixed(2)}</p>
+              <p className="text-3xl font-bold text-primary mb-4">₹{artwork.price.toLocaleString('en-IN')}</p>
               <Button size="lg" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                 Buy Now
               </Button>
-              <p className="text-xs text-center text-muted-foreground mt-2">Secure checkout with Stripe</p>
+              <p className="text-xs text-center text-muted-foreground mt-2">Secure checkout with Razorpay</p>
             </div>
           </div>
         </div>
